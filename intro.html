@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meet</title>
+  <meta name="description" content="A dark, creative intro for Joy — writer, coder, 3D artist, scientist-at-heart." />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
+
+  <style>
+    .quote-mark {
+      font-family: ui-serif, Georgia, 'Times New Roman', serif;
+      font-size: 3rem;
+      opacity: .12;
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased">
+
+  <header class="max-w-6xl mx-auto px-6 py-8 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center text-white font-bold">J</div>
+      <div>
+        <h1 class="text-lg font-semibold"></h1>
+        
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <button id="toggleDark" class="px-3 py-1 rounded-md text-sm">🌙</button>
+      <a href="#contact" class="text-sm underline">Contact</a>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 pb-16">
+    <section class="relative bg-gradient-to-b from-white to-transparent dark:from-gray-900 rounded-2xl p-8 md:p-12 shadow-lg overflow-hidden">
+      <div class="flex flex-col md:flex-row gap-8">
+        <!-- Profile card -->
+        <aside class="md:w-1/3 flex-shrink-0">
+          <div class="rounded-xl p-6 bg-gradient-to-tr from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 border dark:border-gray-700">
+            <div class="flex items-center gap-4">
+              <img class="w-16 h-16 rounded-full object-cover" src="not_me_chibi.png" alt="Profile Picture of Joy" />
+              <div>
+                <h2 class="text-2xl font-bold">He</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400">College student • Obsessive creator</p>
+              </div>
+            </div>
+            <ul class="mt-6 space-y-2 text-sm">
+              <li><strong>Works in:</strong> Stories, Code, Drawing, 3D Modeling</li>
+              <li><strong>Interests:</strong> Writing, Gaming, Reading, Singing (multilingual), Programming</li>
+              <li><strong>Obsession:</strong> Complexity, science, tech, raw narratives</li>
+            </ul>
+            <div class="mt-6 text-xs text-gray-500 dark:text-gray-400">
+              Philosophy: "It’s not about <em>can</em> you do it — it’s about <em>are you willing</em> to do it?"
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main intro -->
+        <article class="md:flex-1">
+          <div class="flex items-start gap-4">
+            <div class="quote-mark">“</div>
+            <div>
+              <h3 class="text-3xl md:text-4xl font-extrabold leading-tight">A mind on the edge of darkness</h3>
+              <p class="mt-4 text-gray-700 dark:text-gray-300">
+                A college student with a mind that edges toward darkness — not from a thirst for cruelty, but from obsession. 
+                He admits to a strange reverence for the fragile beauty of mortality, whether his own or another's. 
+                Above all, he creates: stories, code, sketches, and 3D models. 
+                Every craft is another language for the same pursuit — to make something more real than reality itself.
+              </p>
+              <p class="mt-4 text-gray-700 dark:text-gray-300">
+                He is drawn to the complex and the entangled: narratives that unravel sanity like a favorite refrain, 
+                bleed raw emotion, and swing between the deepest pain and the brightest joy. 
+                His curiosity is voracious — from quantum puzzles to universal truths, there's hardly a corner of science he won't devour.
+              </p>
+              <p class="mt-4 text-gray-700 dark:text-gray-300">
+                Beyond storytelling, technology is his second obsession. 
+                From his first <code>Hello World</code> to seeing the world as lines of code, 
+                from dissecting games and apps to probing CPUs and transistors — 
+                he constantly asks how things connect and why they hold together.
+              </p>
+              <p class="mt-6 text-lg font-semibold">In short: creative, restless, unafraid.</p>
+              <blockquote class="mt-4 border-l-4 border-gray-300 dark:border-gray-700 pl-4 italic text-gray-600 dark:text-gray-400">
+                “It’s not about <strong>can</strong> you do it — it’s about <strong>are you willing</strong> to do it?”
+              </blockquote>
+              <p class="mt-4 text-gray-700 dark:text-gray-300">
+               And if you want to know his name, It's <span class="bg-gradient-to-br from-purple-600 to-pink-500 bg-clip-text text-transparent font-extrabold"> Joy </span></p>
+            </div>
+          </div>
+
+          <!-- tags / skills -->
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <span class="px-3 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">Writing</span>
+            <span class="px-3 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">3D Modeling</span>
+            <span class="px-3 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">Programming</span>
+            <span class="px-3 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">Game Design</span>
+            <span class="px-3 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">Singing</span>
+            <span class="px-3 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">Science</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Dark mode toggle
+    const toggleBtn = document.getElementById('toggleDark');
+
+    function setTheme(isDark) {
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+        toggleBtn.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        toggleBtn.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    // On load: apply saved theme
+    setTheme(localStorage.getItem('theme') === 'dark');
+
+    // Toggle on click
+    toggleBtn.addEventListener('click', () => {
+      const isDark = !document.documentElement.classList.contains('dark');
+      setTheme(isDark);
+    });
+  </script>
+</body>
+</html>
